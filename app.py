@@ -7,6 +7,11 @@ app = Flask(__name__)
 
 # Load model and scaler
 model = joblib.load('model.pkl')
+scaler = joblib.load('scaler.pkl')
+
+@app.route('/')
+def home():
+    return "🏠 Housing Price API is running!"
 
 @app.route('/predict', methods=['POST'])
 def predict():
