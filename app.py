@@ -6,7 +6,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Load model and scaler
-model = joblib.load('housing_price_model.pkl')
+model = joblib.load('model.pkl')
 scaler = joblib.load('scaler.pkl')
 
 @app.route('/predict', methods=['POST'])
