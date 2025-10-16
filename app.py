@@ -7,7 +7,6 @@ app = Flask(__name__)
 
 # Load model and scaler
 model = joblib.load('model.pkl')
-scaler = joblib.load('scaler.pkl')
 
 @app.route('/predict', methods=['POST'])
 def predict():
